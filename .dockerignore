@@ -1,0 +1,13 @@
+node_modules
+build
+.git
+.env
+README.md
+Dockerfile
+nginx.config
+.gitignore
+.prettierrc
+.prettier
+.gitattributes
+.vscode
+.idea
