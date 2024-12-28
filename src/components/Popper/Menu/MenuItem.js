@@ -16,11 +16,11 @@ function MenuItem({ data, onClick }) {
         separate: data.separate,
     });
 
-    const handleOnClick = () => {
-        if (data.title === 'Log out') {
-            contextModal.handleShowModalLogOut();
-        }
-    };
+    // const handleOnClick = () => {
+    //     if (data.title === 'Log out') {
+    //         contextModal.handleShowModalLogOut();
+    //     }
+    // };
 
     const toggleTheme = (e) => {
         if (e.target.checked) {
@@ -32,7 +32,7 @@ function MenuItem({ data, onClick }) {
 
     return (
         <div className={cx('cover')}>
-            <Button className={classes} leftIcon={data.icon} to={data.to} onClick={handleOnClick}>
+            <Button className={classes} leftIcon={data.icon} to={data.to} onClick={onClick}>
                 {data.title}
                 {data.title === 'Dark mode' && (
                     <div className={cx('container')}>

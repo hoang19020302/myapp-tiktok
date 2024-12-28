@@ -6,6 +6,7 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { Link } from 'react-router-dom';
 
+import CustomImage from '~/components/Image';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -23,9 +24,7 @@ import {
     DarkModeIcon,
     LogoutIcon,
     ThreeDotIcon,
-    LogoWhiteIcon,
 } from '~/components/Icons';
-import Image from '~/components/Images';
 import Search from '~/layouts/Search';
 import config from '~/config';
 import { useContext } from 'react';
@@ -52,6 +51,21 @@ function Header() {
                         type: 'language',
                         code: 'vi',
                         title: 'Vietnamese',
+                    },
+                    {
+                        type: 'language',
+                        code: 'fr',
+                        title: 'Français',
+                    },
+                    {
+                        type: 'language',
+                        code: 'zh',
+                        title: 'Chinese',
+                    },
+                    {
+                        type: 'language',
+                        code: 'ja',
+                        title: 'Japanese',
                     },
                 ],
             },
@@ -101,38 +115,39 @@ function Header() {
             separate: true,
         },
     ];
-    // Handle Logic
-    const handleMenuChange = (menuItem) => {
-        switch (menuItem.type) {
-            case 'language':
-                //Handle Change Language
-                break;
-            default:
-        }
-    };
 
     const contextModal = useContext(ModalContext);
     const contextLogin = useContext(LoginContext);
     const contextTheme = useContext(ThemeContext);
+
+    // Handle Logic Actions
+    const handleMenuChange = (menuItem) => {
+        switch (menuItem.title) {
+            case 'language':
+                //Handle Change Language
+                break;
+            case 'darkMode':
+                //Handle Toggle Dark Mode
+                break;
+            case 'Log out':
+                console.log('Log out');
+                contextModal.handleShowModalLogOut();
+                break;
+            default:
+        }
+    };
 
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
                     <Link to={config.routes.home} className={cx('logo-link')}>
-                        {/* {!contextTheme.isDark && <img src={images.tiktokLogo} alt="Tiktok" />} */}
-                        {!contextTheme.isDark && (
-                            <img className={cx('reel-tok')} src={images.logoWebBlack} alt="ReelTok" />
-                        )}
-
-                        {/* {contextTheme.isDark && <LogoWhiteIcon />} */}
-                        {contextTheme.isDark && (
-                            <img className={cx('reel-tok')} src={images.logoWebWhite} alt="ReelTok" />
-                        )}
+                        <CustomImage className={cx('logo')} src={images.logo} alt="Freshy Logo" />
+                        <CustomImage className={cx('name-app')} src={images.nameApp} alt="Freshy" />
                     </Link>
                 </div>
 
-                <Search />
+                {contextLogin.data ? <Search /> : null}
 
                 <div className={cx('actions')}>
                     {contextLogin.data ? (
@@ -170,7 +185,7 @@ function Header() {
                     )}
                     {contextLogin.data && (
                         <Menu items={userMenu} onChange={handleMenuChange}>
-                            <Image
+                            <CustomImage
                                 className={cx('user-avatar')}
                                 src={contextLogin.data.avatar}
                                 alt={contextLogin.data.nickname}

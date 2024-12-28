@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 
 import styles from './AccountItem.module.scss';
-import Image from '../Images';
+import Image from '../Image';
 import { BlueTickIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);

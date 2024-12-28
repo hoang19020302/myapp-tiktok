@@ -7,7 +7,7 @@ import { CommentContext } from '../CommentProvider';
 import styles from './LayOutComment.module.scss';
 import VideoCommentItem from '~/components/VideoCommentItem';
 import { BinIcon, BlueTickIcon, DotDotDot, HeartCommentIcon, XIcon } from '../Icons';
-import Image from '~/components/Images';
+import Image from '~/components/Image';
 import { GetListComment } from '~/service/GetListComment';
 import Button from '../Button/Button';
 import { PostCommentService } from '~/service/PostCommentService';

@@ -19,7 +19,7 @@ import { ModalContext } from '~/components/ModalProvider';
 const cx = classNames.bind(styles);
 
 const loginList = {
-    title: 'Log in to TikTok',
+    title: 'Log in to Freshy',
     contents: [
         {
             id: 1,
@@ -30,7 +30,7 @@ const loginList = {
         {
             id: 2,
             icon: <ProfileIcon />,
-            title: 'Use phone / email / username',
+            title: 'Use phone / email',
         },
         {
             id: 3,
@@ -58,18 +58,6 @@ const loginList = {
         },
         {
             id: 7,
-            icon: <KakaoIcon />,
-            title: 'Continue with KakaoTalk',
-            disabled: true,
-        },
-        {
-            id: 8,
-            icon: <AppleIcon />,
-            title: 'Continue with Apple',
-            disabled: true,
-        },
-        {
-            id: 9,
             icon: <InsIcon />,
             title: 'Continue with Instagram',
             disabled: true,

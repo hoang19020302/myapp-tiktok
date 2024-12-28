@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import { useState } from 'react';
 
 import { BlueTickIcon } from '../Icons';
-import Image from '../Images';
+import Image from '../Image';
 import styles from './VideoOverlayComment.module.scss';
 import Button from '../Button';
 import { MusicIcon } from '~/components/Icons';

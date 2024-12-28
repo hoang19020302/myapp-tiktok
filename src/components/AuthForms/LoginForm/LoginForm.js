@@ -58,8 +58,8 @@ function LoginForm() {
 
             <div className={cx('content')}>
                 <div className={cx('title-input')}>
-                    <span className={cx('title-email')}>Email or username</span>
-                    <span className={cx('title-phone')}>Log in with phone</span>
+                    <span className={cx('title-email')}>Phone number</span>
+                    <span className={cx('title-phone')}>Log in with email</span>
                 </div>
 
                 <div className={cx('form')}>

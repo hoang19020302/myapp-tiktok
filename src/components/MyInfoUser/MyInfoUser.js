@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './MyInfo.module.scss';
 import { useContext } from 'react';
-import Image from '~/components/Images/Images';
+import Image from '~/components/Image/Image';
 import { ModalContext } from '~/components/ModalProvider';
 import { DotDotDot, EditIcon, PLayIconEmpty, ShareEmptyIcon } from '~/components/Icons';
 import ListVideoProfile from '~/components/ListVideoProfile';

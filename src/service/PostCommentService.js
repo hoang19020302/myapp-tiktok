@@ -1,4 +1,4 @@
-import * as httpRequest from '~/ultils';
+import * as httpRequest from '~/utils';
 
 export const PostCommentService = async (uuid, newComment) => {
     try {

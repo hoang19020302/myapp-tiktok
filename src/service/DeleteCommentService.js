@@ -1,8 +1,8 @@
-import * as httpRequest from '~/ultils';
+import * as httpRequest from '~/utils';
 
 export const DeleteCommentService = async (idComment) => {
     try {
-        const res = await httpRequest.DELETE('comments/' + idComment, {
+        const res = await httpRequest.remove('comments/' + idComment, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             },

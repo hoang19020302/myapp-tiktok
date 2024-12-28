@@ -24,8 +24,6 @@ function VideoItem({ children, idVideo, uuidVideo, item }) {
     const videoRef = useRef();
     const myRef = useRef();
 
-    console.log('UUID in VideoItem: ', uuidVideo);
-
     const contextVideo = useContext(VideoContext);
     const contextComment = useContext(CommentContext);
 

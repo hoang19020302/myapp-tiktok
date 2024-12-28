@@ -1,11 +1,11 @@
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
 
-import Image from '~/components/Images';
+import Image from '~/components/Image';
 import styles from './SuggestedAccounts.module.scss';
 import { BlueTickIcon } from '~/components/Icons';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
-import AccoutPreview from './AccoutPreview';
+import AccountPreview from './AccountPreview';
 
 const cx = classNames.bind(styles);
 
@@ -13,7 +13,7 @@ function AccountItem({ item }) {
     const renderPreview = (props) => (
         <div tabIndex="-1" {...props}>
             <PopperWrapper className={cx('menu-popper')}>
-                <AccoutPreview item={item} />
+                <AccountPreview item={item} />
             </PopperWrapper>
         </div>
     );

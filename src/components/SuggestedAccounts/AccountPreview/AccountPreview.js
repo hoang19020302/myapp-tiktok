@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 
-import styles from './AccoutPreview.module.scss';
-import Image from '~/components/Images';
+import styles from './AccountPreview.module.scss';
+import Image from '~/components/Image';
 import Button from '~/components/Button';
 import { BlueTickIcon } from '~/components/Icons';
 

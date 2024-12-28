@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './ProfileUser.module.scss';
 import { useContext } from 'react';
-import Image from '~/components/Images/Images';
+import Image from '~/components/Image/Image';
 import { DotDotDot, PLayIconEmpty, ShareEmptyIcon } from '~/components/Icons';
 import ListVideoProfile from '~/components/ListVideoProfile';
 import { CommentContext } from '~/components/CommentProvider';

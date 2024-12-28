@@ -28,6 +28,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
                         if (isParent) {
                             setHistory((prev) => [...prev, item.children]);
                         } else {
+                            console.log(item)
                             onChange(item);
                         }
                     }}
@@ -55,7 +56,8 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
 
     return (
         <Tippy
-            delay={[0, 300]}
+            //trigger="click"
+            delay={[0, 600]}
             offset={[12, 8]}
             hideOnClick={hideOnClick}
             interactive

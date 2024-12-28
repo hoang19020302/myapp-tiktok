@@ -1,4 +1,4 @@
-import * as httpRequest from '~/ultils';
+import * as httpRequest from '~/utils';
 
 export const RegisterService = async (email, password) => {
     console.log('Email service: ', email);

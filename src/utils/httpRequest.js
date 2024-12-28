@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 const httpRequest = axios.create({
-    baseURL: 'http://localhost:3002/',
+    baseURL: 'https://tiktok.fullstack.edu.vn/api/',
 });
 
 export const get = async (path, options = {}) => {
     const response = await httpRequest.get(path, options);
-    return response;
+    return response.data;
 };
 
 export const post = async (path, body = {}, options = {}) => {
@@ -14,7 +14,17 @@ export const post = async (path, body = {}, options = {}) => {
     return response.data;
 };
 
-export const DELETE = async (path, options = {}) => {
+export const patch = async (path, data, options = {}) => {
+    const response = await httpRequest.patch(path, data, options);
+    return response.data;
+};
+
+export const put = async (path, data, options = {}) => {
+    const response = await httpRequest.put(path, data, options);
+    return response.data;
+};
+
+export const remove = async (path, options = {}) => {
     const response = await httpRequest.delete(path, options);
     return response.data;
 };

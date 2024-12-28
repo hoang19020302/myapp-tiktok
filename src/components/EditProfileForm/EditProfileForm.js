@@ -5,7 +5,7 @@ import { ModalContext } from '../ModalProvider';
 import { XIcon } from '../Icons';
 import Button from '../Button';
 import { LoginContext } from '~/components/LoginProvider';
-import Image from '../Images';
+import Image from '../Image';
 import { UpdateProfileService } from '~/service/UpdateProfile';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

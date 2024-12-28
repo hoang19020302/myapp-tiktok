@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import Button from '~/components/Button';
 import { DownExpandIcon } from '~/components/Icons';
 import styles from '../UserAuthForm.module.scss';
-import { FacebookIcon, GoogleIcon, KakaoIcon, LineIcon, ProfileIcon, TwitterIcon } from '~/components/Icons';
+import { FacebookIcon, GoogleIcon, InsIcon, LineIcon, ProfileIcon, TwitterIcon } from '~/components/Icons';
 import { useContext, useMemo, useState } from 'react';
 import { ModalContext } from '~/components/ModalProvider';
 
@@ -14,7 +14,7 @@ function RegisterAuthForm() {
         () => [
             {
                 showMore: true,
-                title: 'Sign up for TikTok',
+                title: 'Sign up for Freshy',
                 contents: [
                     {
                         id: 1,
@@ -61,8 +61,8 @@ function RegisterAuthForm() {
                         disabled: true,
                     },
                     {
-                        icon: <KakaoIcon />,
-                        title: 'Continue with KakaoTalk',
+                        icon: <InsIcon />,
+                        title: 'Continue with Instagram',
                         disabled: true,
                     },
                 ],

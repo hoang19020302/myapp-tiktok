@@ -43,10 +43,10 @@ function LoginProvider({ children }) {
                 setLoading(false);
                 contentModal.handleHideModal();
                 setIsNotify(true);
-            }, 2500); // Thời gian là 2.8 giây (2800 milliseconds)
+            }, 2000); // Thời gian là 2.8 giây (2800 milliseconds)
             setTimeout(() => {
                 setIsNotify(false);
-            }, 2200); // Thời gian là 2.8 giây (2800 milliseconds)
+            }, 2000); // Thời gian là 2.8 giây (2800 milliseconds)
         } else {
             setLoading(false);
             setShowError(true);

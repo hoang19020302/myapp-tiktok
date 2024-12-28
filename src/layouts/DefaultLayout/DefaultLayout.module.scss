@@ -28,10 +28,32 @@
     width: var(--default-layout-width);
     margin-top: var(--default-layout-header-high);
     display: flex;
+    position: relative;
+    height: 100vh;
 }
 
 .content {
-    flex: 1;
+    width: calc(100% - 250px); /* 250px là chiều rộng của sidebar */
+    margin-left: 250px; /* Đẩy nội dung sang phải */
+    flex-grow: 1; /* Chiếm toàn bộ không gian còn lại */
+    position: relative; /* Để đặt background image */
+    z-index: 1; /* Đảm bảo background nằm dưới các lớp khác */
+    overflow: hidden; /* Ngăn nội dung tràn ra ngoài */
+}
+
+.content::before {
+    content: ''; /* Tạo lớp phủ background */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Hoặc dùng cover */
+    object-fit: cover;
+    background-image: url(''); /* Đường dẫn đến ảnh của bạn */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1; /* Background nằm dưới nội dung */
 }
 
 @keyframes slideAnimation {

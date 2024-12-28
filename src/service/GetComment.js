@@ -1,4 +1,4 @@
-import * as httpRequest from '~/baseAPI';
+import * as httpRequest from '~/utils';
 
 export const getComment = async () => {
     try {

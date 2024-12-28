@@ -1,8 +1,8 @@
-import * as httpRequest from '~/ultils';
+import * as httpRequest from '~/utils';
 
 export const DeleteVideoService = async (idVideo) => {
     try {
-        const res = await httpRequest.DELETE('videos/' + idVideo, {
+        const res = await httpRequest.remove('videos/' + idVideo, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             },

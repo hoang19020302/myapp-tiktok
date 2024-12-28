@@ -1,11 +1,14 @@
 .wrapper {
-    width: 225px;
+    width: 250px;
     position: fixed;
     top: 0;
     bottom: 0;
     padding: 20px 0 26px 8px;
     margin-left: -11px;
     overflow-y: scroll;
+    flex-shrink: 0; /* Không cho sidebar co lại */
+    z-index: 2; /* Sidebar nổi trên các lớp khác */
+    background-color: rgb(254, 242, 228); /* Màu nền sidebar */
 
     &:hover {
         transition: opacity 2s ease;

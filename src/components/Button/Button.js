@@ -14,6 +14,7 @@ function Button({
     disabled = false,
     rounded = false,
     small = false,
+    medium = false,
     large = false,
     leftIcon,
     rightIcon,
@@ -56,6 +57,7 @@ function Button({
         disabled,
         rounded,
         small,
+        medium,
         large,
         white,
     });
@@ -78,6 +80,7 @@ Button.propTypes = {
     disabled: PropTypes.bool,
     rounded: PropTypes.bool,
     small: PropTypes.bool,
+    medium: PropTypes.bool,
     large: PropTypes.bool,
     white: PropTypes.bool,
     leftIcon: PropTypes.node,

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from '~/components/Button';
 import styles from './Upload.module.scss';
 import classNames from 'classnames/bind';
-import Image from '~/components/Images';
+import Image from '~/components/Image';
 import images from '~/assets/images';
 import { postVideoService } from '~/service/PostVideoService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
